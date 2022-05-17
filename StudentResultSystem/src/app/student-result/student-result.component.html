@@ -1,88 +1,55 @@
-<br>
-<br>
 <div class="container">
-  
-      <div class="text-center">
-        <h5>Enter Student Details</h5>
+  <div class="text-center">
+    <h4>Student Information</h4>
+  </div>
+  <br>
+  <div class="row ">
+    <div class="col">
+      <label for="Form" class="form-label">First Name</label>
+      <input type="text" class="form-control" id="Form" placeholder="John" aria-label="First Name">
+    </div>
+    <div class="col">
+      <label for="Form" class="form-label">Last Name</label>
+      <input type="text" class="form-control" id="Form" placeholder="Richard"  aria-label="Last Name">
+    </div>
+    <div class="col">
+      <label for="Form" class="form-label">Roll Number</label>
+      <input type="text" class="form-control" id="Form" placeholder="JR957"  aria-label="Roll Number">
+    </div>
+    <div class="col">
+        <label for="Form" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="Form" placeholder="name@example.com">
+    </div>
+    <div class="card">
+      <div class=" text-center">
+       <h4>Average Calculation</h4>
       </div>
       <br>
-      <div class="row ">
-        <div class="col">
-         
-          <label for="exampleFormControlInput1" class="form-label">First Name</label>
-          <input type="text" class="form-control"  aria-label="First Name">
-        </div>
-        <div class="col">
-         
-          <label for="exampleFormControlInput1" class="form-label">Last Name</label>
-          <input type="text" class="form-control"  aria-label="Last Name">
-        </div>
-       
-        <div class="col">
-         
-          <label for="exampleFormControlInput1" class="form-label">Roll Number</label>
-          <input type="text" class="form-control"  aria-label="Roll Number">
-        </div>
-        <div class="col">
-          <label for="exampleFormControlInput1" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-        </div>
-     
-    <br>
-    <br>
-    <br>
-    <br>
- 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="card">
-          <div class=" text-center">
-            <h6>Calculate Average</h6>
-         </div> 
-         <br>
-        <form>
-          <div class="row">
-            <div class="col">
-              <label>Maths</label>
-              <input type="number" class="form-control" aria-label="Maths">
+      <form>
+        <div class="row">
+          <div class="col">
+            <label>Maths</label>
+            <input type="number" name="Maths" class="form-control" aria-label="Maths" [(ngModel)]="Maths">
+          </div>
+          <div class="col">
+            <label>Physics</label>
+            <input type="number" name="Physics" class="form-control" aria-label="Physics" [(ngModel)]="Physics">
+          </div>
+          <div class="col">
+            <label>Chemistry</label>
+            <input type="number" name="Chemistry" class="form-control" aria-label="Chemistry" [(ngModel)]="Chemistry">
+          </div>
+          <br>
+          <div class="row" class="text-center" class="mb-3">
+           <b><label>Average:</label></b>
+            <output name="average" type="number" class="form-control" aria-label="Average" >{{average}}</output>
+          </div>
+          <div class="text-center">
+            <button (click)="Average()" type="button" class="btn btn-success mx-2">Average</button>
+            <button type="button" class="btn btn-success">Submit</button>
             </div>
-            <div class="col">
-              <label>Physics</label>
-              <input type="number" class="form-control" aria-label="Maths">
-            </div>
-            <div class="col">
-              <label>Chemistry</label>
-              <input type="number" class="form-control" aria-label="Maths">
-            </div>
-            <br>
-            <div class="row" class="text-center" class="mb-3">
-            <label>Average</label>
-              <input type="number" class="form-control" aria-label="Maths">
-            </div>
-            <div class="text-center"> 
-             <button type="button"class="btn btn-success">Success</button>
-            </div> 
-
           </div>
         </form>
       </div>
     </div>
-          
-
-        
-   
-  
-      
-       
-      
-    
-
-  
-
-      
-      
-       
-
-          
-        
+  </div>

@@ -5,13 +5,15 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './student-result.component.html',
   styleUrls: ['./student-result.component.css']
 })
-export class StudentResultComponent implements OnInit {
+export class StudentResultComponent {
+  public Maths:number=0;
+  public Physics:number=0;
+  public Chemistry:number=0;
+  public average:number=0;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  Average(){
+    this.average=(this.Maths+this.Physics+this.Chemistry)/3;
   }
-
 
 }
 
